@@ -9,7 +9,7 @@ async function generateSHA256(text) {
 async function generateSentence() {
     const name = document.getElementById("nameInput").value;
     const characters = '0123456789abcdef';
-    const baseString = `My name is ${name} and sha256's top favorite character is `;
+    const baseString = `My name is ${name} and sha256 gave me a character: `;
 
     for (let char of characters) {
         const sentence = baseString + char;
@@ -20,6 +20,6 @@ async function generateSentence() {
         }
     }
 
-    document.getElementById("result").innerText = "Couldn't find a matching sentence.";
+    document.getElementById("result").innerText = "Couldn't find a good character for you.";
 }
 
